@@ -1,0 +1,233 @@
+# 🏭 Factory Reallocation & Shipping Optimization System
+
+(Final Year / Internship ML Project)
+
+---
+
+## 🎯 Project Goal
+
+Build a machine learning system that:
+
+* Predicts shipping lead time
+* Simulates factory reassignment scenarios
+* Recommends the best factory for a product
+* Improves operational efficiency
+
+Company Context: Nassau Candy Distributor
+
+---
+
+## 🧠 Core Idea (Simple Explanation)
+
+Traditional factory assignment is fixed.
+
+This system:
+
+1. Predicts lead time using ML
+2. Tests all factory options
+3. Compares outcomes
+4. Recommends the best factory
+
+---
+
+## 📁 Project Structure
+
+nassau_factory_optimization/
+
+* data/
+
+  * raw.csv
+  * processed.csv
+
+* models/
+
+  * lead_time_model.pkl
+
+* src/
+
+  * train_model.py
+  * simulator.py
+
+* app.py   (Streamlit Dashboard)
+
+* eda.ipynb
+
+* requirements.txt
+
+---
+
+## ⚙️ Main Features Built
+
+### ✔ Feature Engineering
+
+* Lead Time Months
+* Factory mapping
+* Factory coordinates
+* Region coordinates
+* Distance_km (geodesic distance)
+* Order Year / Month / Day
+
+---
+
+### ✔ ML Models Used
+
+* Linear Regression (baseline)
+* Random Forest Regressor (best model)
+
+Final Performance:
+
+* R² ≈ 0.56
+* MAE ≈ 5.35 months
+
+---
+
+### ✔ Simulation Engine
+
+For each product:
+
+* Test all factories
+* Predict lead time
+* Rank factories by performance
+
+Output:
+
+Best factory recommendation.
+
+---
+
+### ✔ Streamlit Dashboard
+
+Features:
+
+* Product dropdown
+* Run Optimization button
+* Recommendation table
+* Lead-time graph
+* Best factory suggestion
+
+---
+
+## ▶️ HOW TO START PROJECT NEXT TIME
+
+### 1️⃣ Open VS Code
+
+Open folder:
+
+nassau_factory_optimization
+
+---
+
+### 2️⃣ Activate Virtual Environment (Windows)
+
+Terminal:
+
+.venv\Scripts\activate
+
+You should see:
+
+(.venv)
+
+---
+
+### 3️⃣ Run Dashboard
+
+streamlit run app.py
+
+Browser will open automatically.
+
+---
+
+## 🧪 Run Model Training Again (if needed)
+
+python src/train_model.py
+
+This will:
+
+* train models
+* save model to models/lead_time_model.pkl
+
+---
+
+## 🔧 Run Simulation Alone
+
+python src/simulator.py
+
+---
+
+## 🧑‍🏫 Viva Explanation (IMPORTANT)
+
+What does project do?
+
+“This system predicts shipping lead time and recommends optimal factory assignments using machine learning and scenario simulation.”
+
+---
+
+### Why Random Forest?
+
+* Handles non-linear relationships
+* Works well with mixed features
+* Better performance than Linear Regression
+
+---
+
+### Key Features Used
+
+* Distance_km
+* Region
+* Factory
+* Ship Mode
+* Sales / Cost
+* Time features (Order Month/Day)
+
+---
+
+### Business Impact
+
+* Reduce lead time
+* Improve logistics efficiency
+* Support decision-making before execution
+
+---
+
+## 🚨 Common Errors & Fix
+
+### NameError in Streamlit
+
+➡ Keep code inside button block.
+
+### String to float error
+
+➡ Ensure categorical encoding is done.
+
+### Missing columns error
+
+➡ Recreate Order_Year / Month / Day.
+
+---
+
+## ⭐ Project Level
+
+* Internship Ready ✔
+* Final Year Project ✔
+* Placement Portfolio ✔
+
+---
+
+## 🧠 GOLD SENTENCE (Say in Presentation)
+
+“We transformed descriptive logistics data into a decision intelligence system using predictive modeling and factory simulation.”
+
+---
+
+## 🚀 If Continuing Later (Next Improvements)
+
+Optional upgrades:
+
+* Add factory name mapping
+* Add feature importance graph
+* Add profit impact simulation
+* Add optimization slider
+
+---
+
+END OF NOTES
